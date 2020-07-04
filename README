@@ -2,3 +2,5 @@
 
 1.wol(wake on lan),网络唤醒,用于唤醒个人PC
 通过UDP协议发送魔术包，对外以http提供接口服务
+
+2.getRemoteHost,获取远端主机信息

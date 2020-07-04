@@ -39,10 +39,10 @@ public class ToolsController {
         return result;
     }
 
-    //get external ip
+    // get remote host
     @ResponseBody
-    @RequestMapping(path = {"/api/getExtIp"},method = {RequestMethod.GET,RequestMethod.POST})
-    public Map<String,Object> getExtIp(HttpServletRequest request)throws Exception{
+    @RequestMapping(path = {"/api/getRemoteHost"},method = {RequestMethod.GET,RequestMethod.POST})
+    public Map<String,Object> getRemoteHost(HttpServletRequest request)throws Exception{
         Map<String,Object> result = new HashMap<>();
         result.put("code",0);
         result.put("message","success");
