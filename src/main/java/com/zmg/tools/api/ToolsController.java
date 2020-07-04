@@ -21,8 +21,9 @@ public class ToolsController {
     @Autowired
     private UDPClient udpClient;
 
+    //wake on lan
     @ResponseBody
-    @RequestMapping(path ={"/api/toolController/wol"},method = {RequestMethod.GET})
+    @RequestMapping(path ={"/api/wol"},method = {RequestMethod.GET})
     public Map<String,Object> wol(HttpServletRequest request) throws Exception{
         Map<String,Object> result = new HashMap<>();
         String hostName = request.getParameter("hostName");
@@ -35,6 +36,18 @@ public class ToolsController {
         result.put("hostName",hostName);
         result.put("port",port);
         result.put("macAddress",macAddress);
+        return result;
+    }
+
+    //get external ip
+    @ResponseBody
+    @RequestMapping(path = {"/api/getExtIp"},method = {RequestMethod.GET,RequestMethod.POST})
+    public Map<String,Object> getExtIp(HttpServletRequest request)throws Exception{
+        Map<String,Object> result = new HashMap<>();
+        result.put("code",0);
+        result.put("message","success");
+        result.put("host",request.getRemoteHost());
+        result.put("port",request.getRemotePort());
         return result;
     }
 }
