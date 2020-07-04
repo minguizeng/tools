@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zmg</groupId>
-    <artifactId>wol</artifactId>
+    <artifactId>tools</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>wol</name>
+    <name>tools</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
