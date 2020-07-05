@@ -4,3 +4,16 @@
 通过UDP协议发送魔术包，对外以http提供接口服务
 
 2.getRemoteHost,获取远端主机信息
+
+3.简易版消息队列功能(只支持JSON格式消息)
+生产者通过http-post的方式推送消息
+消费者通过http-get/post的方式轮询消费消息
+
+               层级结构
+                root
+              /      \
+          app1        app2
+         /   \          |
+     queue1  queue2    queue3
+
+4.todo
